@@ -25,7 +25,7 @@ function App() {
   const handleFilterData = (val) => {
     if (val.length) {
       setData(movieData.filter((movie, i) => {
-        return val === movie.movieName.slice(0, val.length)
+        return val.toLowerCase() === movie.movieName.slice(0, val.length).toLowerCase()
       }));
     }
     else { setData(movieData) }
